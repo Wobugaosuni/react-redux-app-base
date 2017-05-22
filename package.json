@@ -13,6 +13,16 @@
   "author": "Ann Huang",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "babel-loader": "^7.0.0",
+    "css-loader": "^0.28.2",
+    "html-webpack-plugin": "^2.28.0",
+    "open-browser-webpack-plugin": "0.0.5",
+    "postcss-loader": "^2.0.5",
+    "style-loader": "^0.18.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "url-loader": "^0.5.8",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
   },
