@@ -17,7 +17,7 @@ module.export = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel'
       },
@@ -66,6 +66,7 @@ module.export = {
     })
   ],
 
+  // 对 webpack-dev-server 的配置
   devServer: {
     colors: true,  // 终端输出结果为彩色
     historyApiFallback: true,  // 不跳转，在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html

@@ -4,7 +4,7 @@
   "description": "react project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=dev webpack-dev-server --progress --colors"  // progress: 显示合并代码进度。colors: 命令行中显示颜色
   },
   "keywords": [
     "react",
