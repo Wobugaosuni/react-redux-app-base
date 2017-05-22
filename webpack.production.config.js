@@ -62,7 +62,7 @@ module.exports = {
       template: __dirname + '/app/index/tmpl.html'
     }),
 
-    // 定义为生产环境，编译 React 时压缩到最小
+    // 定义为生产环境，编译 React 时压缩到最小(即把开发环境中的一些提示、警告、判断通通去掉
     new webpack.DefinePlugin({
       'process.env': {
         'NODE.ENV': JSON.stringify(process.env.NODE.ENV)
