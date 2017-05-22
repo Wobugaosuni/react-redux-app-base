@@ -4,7 +4,7 @@
   "description": "react project",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=dev webpack-dev-server --progress --colors"  // progress: 显示合并代码进度。colors: 命令行中显示颜色
+    "start": "NODE_ENV=dev webpack-dev-server --progress --colors"
   },
   "keywords": [
     "react",
@@ -23,6 +23,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.2",
+    "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "html-webpack-plugin": "^2.28.0",
     "open-browser-webpack-plugin": "0.0.5",
