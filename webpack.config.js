@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'app/index.jsx'), // 入口文件
+  entry: path.resolve(__dirname, 'app/index.js'), // 入口文件
 
   output: {
     filename: "bundle.js" // 出口文件

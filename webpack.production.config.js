@@ -6,7 +6,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';  // 分离css和js�
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'app/index.jsx'),
+    app: path.resolve(__dirname, 'app/index.js'),
 
     // 将 第三方依赖（node_modules中的） 单独打包成 vendor.js
     vendor: Object.keys(packageJson.dependencies)
