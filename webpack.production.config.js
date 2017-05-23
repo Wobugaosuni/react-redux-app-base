@@ -6,7 +6,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';  // 分离css和js�
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'app/index.js'),
+    app: path.resolve(__dirname, 'app/index.jsx'),
 
     // 将 第三方依赖（node_modules中的） 单独打包成 vendor.js
     vendor: Object.keys(packageJson.dependencies)
@@ -18,7 +18,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.styl']
+    extensions: ['', '.js', '.jsx', '.styl']
   },
 
   module: {
@@ -59,7 +59,7 @@ module.exports = {
 
     // html模板插件
     new HtmlWebpackPlugin({
-      template: __dirname + '/app/index/tmpl.html'
+      template: __dirname + '/app/index.tmpl.html'
     }),
 
     // 定义为生产环境，编译 React 时压缩到最小(即把开发环境中的一些提示、警告、判断通通去掉

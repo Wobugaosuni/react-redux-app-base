@@ -1,17 +1,17 @@
-import path from 'path';  // node.js自带的库
-import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import OpenBrowserPlugin from 'open-browser-webpack-plugin';
+var path = require('path');  // node.js自带的库
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
-module.export = {
-  entry: path.resolve(__dirname, 'app/index.js'), // 入口文件
+module.exports = {
+  entry: path.resolve(__dirname, 'app/index.jsx'), // 入口文件
 
   output: {
     filename: "bundle.js" // 出口文件
   },
 
   resolve: {
-    extensions: ['', '.js', '.styl']
+    extensions: ['', '.js', '.jsx', '.styl']
   },
 
   module: {
@@ -49,7 +49,7 @@ module.export = {
   plugins: [
     // html模板插件
     new HtmlWebpackPlugin({
-      template: __dirname + '/app/index/tmpl.html'
+      template: __dirname + '/app/index.tmpl.html'
     }),
 
     // 热加载插件
@@ -57,7 +57,7 @@ module.export = {
 
     //  打开浏览器
     new OpenBrowserPlugin({
-      url: 'http://localhost:8080'
+      url: 'http://localhost:3000'
     }),
 
     // 可在业务 js 代码中使用 __Dev__ 判断是否是dev模式（dev模式下可以提示错误、测试报告等, production模式不提示）
@@ -71,6 +71,7 @@ module.export = {
     colors: true,  // 终端输出结果为彩色
     historyApiFallback: true,  // 不跳转，在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
     inline: true,  // 实时刷新
-    hot: true  // 使用热加载插件 HotModuleReplacementPlugin
+    hot: true,  // 使用热加载插件 HotModuleReplacementPlugin
+    port: 3000
   }
 };
