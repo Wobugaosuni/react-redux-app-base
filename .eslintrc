@@ -1,8 +1,8 @@
 {
+  // 解析器：ESLint 默认使用Espree作为其解析器
   "parser": "babel-eslint",
-  "plugins": [
-    "react"
-  ],  // 使用第三方插件，插件名称可以省略 eslint-plugin- 前缀
+
+  // 设置解析器选项
   "parserOptions": {
     "ecmaVersion": 6,  // ECMAScript 版本
     "sourceType": "module",  // 设置为 "script" (默认) 或 "module"（如果你的代码是 ECMAScript 模块)
@@ -10,9 +10,22 @@
       "jsx": true  // 启动JSX
     }
   },
+
+  // 使用第三方插件，插件名称可以省略 eslint-plugin- 前缀
+  "plugins": [
+    "react"
+  ],
+
+  // 预定义全局变量
   "env": {
-    "browser": true
+    "browser": true,  // browser 全局变量
+    "amd": true,  // 定义 require() 和 define() 作为像 amd 一样的全局变量
+    "es6": true,  // 支持除模块外所有 ECMAScript 6 特性（该选项会自动设置 ecmaVersion 解析器选项为 6）
+    "node": true,
+    "mocha": true
   },
+
+  // eslint规则
   "rules": {
     "comma-dangle": 1,
     "quotes": [ 1, "single" ],
