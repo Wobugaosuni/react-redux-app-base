@@ -7,14 +7,19 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');  // 分离css和
 
 module.exports = {
   entry: {
+    // 将 业务代码 打包为 app.js
     app: path.resolve(__dirname, 'app/index.js'),
 
     // 将 第三方依赖（node_modules中的） 单独打包成 vendor.js
+    // 有助于缓存
     vendor: Object.keys(packageJson.dependencies)
   },
 
   output: {
     path: __dirname + '/build',
+
+    // md5后缀
+    // 为每个打包出来的文件都加md5后缀，可使文件强缓存
     filename: './js/[name].[chunkhash:8].js'
   },
 
@@ -61,8 +66,9 @@ module.exports = {
   // ],
 
   plugins: [
+    // Copyright
     // webpack 内置的 banner-plugin: 可以写公司名称、产权相关等的信息
-    new webpack.BannerPlugin("Copyright by Ann Huang"),
+    new webpack.BannerPlugin('Copyright by Ann Huang'),
 
     // html模板插件
     new HtmlWebpackPlugin({
@@ -76,10 +82,10 @@ module.exports = {
       }
     }),
 
-    // 为组件分配ID，通过这个插件，webpack可以分析和优先考虑使用最多的模块，并为他们分配最小的ID
+    // 为组件分配ID，通过这个插件，webpack可以分析和优先考虑使用最多的模块，并为他们分配长度最小的ID
     new webpack.optimize.OccurrenceOrderPlugin(),
 
-    // 压缩
+    // 代码压缩
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
@@ -89,7 +95,7 @@ module.exports = {
     // 分离css和js文件
     new ExtractTextPlugin('/css/[name].[chunkhash:8].css'),
 
-    // 提供公共代码
+    // 分模块，提供公共代码
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       filename: '/js/[name].[chunkhash:8].js'

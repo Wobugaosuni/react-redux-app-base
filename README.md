@@ -1,8 +1,14 @@
-## 使用webpack构建react项目
-工程化的目录结构，支持本地调试、热加载等
+# react + webpack脚手架
 
+## 目录
+1. 技术选型
+2. 项目目录结构
+3. 相关插件
+4. ...
 
-## 技术选型
+<br />
+
+## 1. 技术选型
 **Javascript**
 - Language: ES6
 - Loader: Babel
@@ -21,8 +27,9 @@
 **Others**
 - Eslint
 
+<br />
 
-## 目录结构
+## 2. 项目目录结构
 
 ```
 .
@@ -43,7 +50,34 @@
 └── webpack.production.config.js  ----- webpack生产环境配置
 ```
 
-## 与其他脚手架对比
+<br />
+
+## 3. 相关插件
+**项目底层插件**
+- 项目运行时必须依赖的插件(-S): react react-dom
+- 开发过程中使用的插件(-D): webpack webpack-dev-server
+
+**项目用到的插件(-D)**
+- 处理样式: style-loader css-loader postcss postcss-loader autoprefixer stylus stylus-loader
+- 处理图片: url-loader file-loader
+- 处理js: babel-core babel-polyfill babel-loader babel-preset-es2015 babel-preset-react babel-preset-stage-0
+- 处理eslint: eslint babel-eslint eslint-plugin-react
+
+**Webpack配置相关插件(-D)**
+- html模板: html-webpack-plugin
+- 自动打开浏览器: open-browser-webpack-plugin
+- css和js代码分离: extract-text-webpack-plugin
+
+**Webpack自带的，不用安装**
+- 热加载: HotModuleReplacementPlugin
+- 设置环境变量: DefinePlugin
+- 给经常使用的模块分配最小长度的id: OccurrenceOrderPlugin
+- 代码压缩: UglifyJsPlugin
+- 分模块: CommonsChunkPlugin
+
+<br />
+
+## 4. 与其他脚手架对比
 github上有很多优秀的脚手架，例如：
 - [react-redux-starter-kit](https://github.com/olegakbarov/react-redux-starter-kit)
 - [react-webpack-generators](https://github.com/react-webpack-generators/generator-react-webpack)
@@ -54,6 +88,8 @@ github上有很多优秀的脚手架，例如：
 - 打包编译时，没有分离js和css代码，没有将第三方依赖单独打包，不利于系统性能的优化，包括加载速度、缓存等
 
 借此，自己搭建了一个脚手架，使用的技术栈如上。
+
+<br />
 
 ## webpack 1.x VS webpack 2.x
 **postcss**
@@ -70,6 +106,7 @@ postcss: [
 解决方法：
 在根目录下新建postcss.config.js or .postcssrc.js，进行配置
 
+<br />
 
 ## 相关文档参考
 - [React Webpack小书](https://fakefish.github.io/react-webpack-cookbook/Getting-started.html)

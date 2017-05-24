@@ -19,8 +19,8 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
+        test: /\.(js|jsx)$/,   // test: 检测哪些文件需要此loader，是一个正则表达式
+        exclude: /node_modules/,  // exclude: 忽略哪些文件
         loader: 'babel-loader'
       },
       {
