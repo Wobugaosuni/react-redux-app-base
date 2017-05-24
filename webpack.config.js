@@ -12,7 +12,7 @@ module.exports = {
 
   // 定义能够被打包的文件，文件后缀名
   resolve: {
-    extensions: ['.js', '.jsx', '.styl']
+    extensions: ['.js', '.jsx']
   },
 
   // webpack将所有的资源都看做是模块，而模块就需要加载器；主要定义一些loaders,定义哪些后缀名的文件应该用哪些loader
@@ -35,11 +35,11 @@ module.exports = {
       },
       {
         test: /\.(png|gif|jpg|jpeg|bmp)$/i,
-        loader: 'url-loader?limit=5000'  // 限制大小为5kb
+        loader: 'url-loader?limit=5000'  // 小于5kb的图片资源转换成base64格式
       },
       {
         test: /\.(png|woff|woff2|svg|ttf|eot)($|\?)/i,
-        loader: 'url-loader?limit=5000'  // 限制大小为5kb
+        loader: 'url-loader?limit=5000'
       }
     ]
   },
