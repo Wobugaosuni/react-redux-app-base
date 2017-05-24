@@ -30,7 +30,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
+        // exclude: /node_modules/,  // 加载node_modules里的normalize.css
         loader: 'style-loader!css-loader!postcss-loader'
       },
       {
