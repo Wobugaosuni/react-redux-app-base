@@ -38,16 +38,16 @@ module.exports = {
         test: /\.styl$/,
         exclude: /node_modules/,
         loader: ExtractTextPlugin.extract({
-          fallback: 'style',
-          use: 'css!postcss!stylus'
+          fallback: 'style-loader',
+          use: 'css-loader!postcss-loader!stylus-loader'
         })  // 将css单独打包成一个文件
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
         loader: ExtractTextPlugin.extract({
-          fallback: 'style',
-          use: 'css!postcss'
+          fallback: 'style-loader',
+          use: 'css-loader!postcss-loader'
         })
       },
       {

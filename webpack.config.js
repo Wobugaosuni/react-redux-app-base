@@ -26,12 +26,12 @@ module.exports = {
       {
         test: /\.styl$/,
         exclude: /node_modules/,
-        loader: 'style!css!postcss!stylus'  // 相当于：`style-loader!css-loader!postcss-loader!stylus-loader`
+        loader: 'style-loader!css-loader!postcss-loader!stylus-loader'  // 相当于：`style-loader!css-loader!postcss-loader!stylus-loader`
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loader: 'style!css!postcss'
+        loader: 'style-loader!css-loader!postcss-loader'
       },
       {
         test: /\.(png|gif|jpg|jpeg|bmp)$/i,
