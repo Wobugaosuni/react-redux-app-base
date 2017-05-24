@@ -10,10 +10,12 @@ module.exports = {
     filename: "bundle.js" // 出口文件
   },
 
+  // 定义能够被打包的文件，文件后缀名
   resolve: {
     extensions: ['', '.js', '.jsx', '.styl']
   },
 
+  // webpack将所有的资源都看做是模块，而模块就需要加载器；主要定义一些loaders,定义哪些后缀名的文件应该用哪些loader
   module: {
     loaders: [
       {
@@ -60,6 +62,7 @@ module.exports = {
       url: 'http://localhost:3000'
     }),
 
+    // 设置环境变量
     // 可在业务 js 代码中使用 __Dev__ 判断是否是dev模式（dev模式下可以提示错误、测试报告等, production模式不提示）
     new webpack.DefinePlugin({
       __Dev__: JSON.stringify(JSON.parse(process.env.NODE_ENV == 'dev') || 'false')

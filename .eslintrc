@@ -2,20 +2,16 @@
   "parser": "babel-eslint",
   "plugins": [
     "react"
-  ],
+  ],  // 使用第三方插件，插件名称可以省略 eslint-plugin- 前缀
   "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
+    "ecmaVersion": 6,  // ECMAScript 版本
+    "sourceType": "module",  // 设置为 "script" (默认) 或 "module"（如果你的代码是 ECMAScript 模块)
+    "ecmaFeatures": {  // 使用的额外的语言特性
+      "jsx": true  // 启动JSX
     }
   },
   "env": {
-    "browser": true,
-    "amd": true,
-    "es6": true,
-    "node": true,
-    "mocha": true
+    "browser": true
   },
   "rules": {
     "comma-dangle": 1,
