@@ -1,8 +1,9 @@
-import packageJson from './package.json';
-import path from 'path';  // node.js自带的库
-import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';  // 分离css和js文件
+var packageJson = require('./package.json');
+var path = require('path');  // node.js自带的库
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');  // 分离css和js文件
+
 
 module.exports = {
   entry: {
@@ -14,11 +15,11 @@ module.exports = {
 
   output: {
     path: __dirname + '/build',
-    filename: "/js/[name].[chunkhash:8].js"
+    filename: './js/[name].[chunkhash:8].js'
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx', '.styl']
+    extensions: ['.js', '.jsx']
   },
 
   module: {
@@ -26,17 +27,23 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel-loader'
       },
       {
         test: /\.styl$/,
         exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract('style', "css!postcss!stylus")  // 将css单独打包成一个文件
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style',
+          use: 'css!postcss!stylus'
+        })  // 将css单独打包成一个文件
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract('style', "css!postcss")
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style',
+          use: 'css!postcss'
+        })
       },
       {
         test: /\.(png|gif|jpg|jpeg|bmp)$/i,
@@ -49,11 +56,11 @@ module.exports = {
     ]
   },
 
-  postcss: [
-    require('autoprefixer')  // 调用autoprefixer插件
-  ],
+  // postcss: [
+  //   require('autoprefixer')  // 调用autoprefixer插件
+  // ],
 
-  plugin: [
+  plugins: [
     // webpack 内置的 banner-plugin: 可以写公司名称、产权相关等的信息
     new webpack.BannerPlugin("Copyright by Ann Huang"),
 
@@ -93,4 +100,4 @@ module.exports = {
       __Dev__: JSON.stringify(JSON.parse(process.env.NODE_ENV == 'dev') || 'false')
     })
   ]
-}
+};

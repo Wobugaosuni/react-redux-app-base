@@ -7,12 +7,12 @@ module.exports = {
   entry: path.resolve(__dirname, 'app/index.js'), // 入口文件
 
   output: {
-    filename: "bundle.js" // 出口文件
+    filename: 'bundle.js' // 出口文件
   },
 
   // 定义能够被打包的文件，文件后缀名
   resolve: {
-    extensions: ['', '.js', '.jsx', '.styl']
+    extensions: ['.js', '.jsx', '.styl']
   },
 
   // webpack将所有的资源都看做是模块，而模块就需要加载器；主要定义一些loaders,定义哪些后缀名的文件应该用哪些loader
@@ -21,7 +21,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel-loader'
       },
       {
         test: /\.styl$/,
@@ -44,9 +44,10 @@ module.exports = {
     ]
   },
 
-  postcss: [
-    require('autoprefixer')  // 调用autoprefixer插件
-  ],
+  // does not work with webpack 2
+  // postcss: [
+  //   require('autoprefixer')  // 调用autoprefixer插件
+  // ],
 
   plugins: [
     // html模板插件
@@ -71,7 +72,7 @@ module.exports = {
 
   // 对 webpack-dev-server 的配置
   devServer: {
-    colors: true,  // 终端输出结果为彩色
+    // colors: true,  // 终端输出结果为彩色
     historyApiFallback: true,  // 不跳转，在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
     inline: true,  // 实时刷新
     hot: true,  // 使用热加载插件 HotModuleReplacementPlugin
