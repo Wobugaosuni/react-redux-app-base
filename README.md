@@ -5,15 +5,17 @@
 ## 技术选型
 **Javascript**
 - Language: ES6
+- Loader: Babel
 - Framework: React
 
-**CSS**
-- Language: Stylus
+**CSS/Preprocessors**
+- Stylus
+- Postcss
 
-**Build Tool**
+**Module loader**
 - Webpack
 
-**Dependency manage**
+**Package manage**
 - npm
 
 **Others**
@@ -25,10 +27,14 @@
 ```
 .
 └── app  ------------------------------ 项目级代码，前端代码
+    ├── components  ------------------- 木偶组件目录
+    ├── containers  ------------------- 智能组件目录
     ├── index.js  --------------------- 页面入口文件
     ├── index.tmpl.html  -------------- 页面模板文件
 ├── .babelrc  ------------------------- babel编译工具的文件
+├── .postcssrc.js  -------------------- postcss配置文件
 ├── .eslintrc  ------------------------ 语法校验工具
+├── .eslintignore  -------------------- 语法校验忽略的目录
 ├── .gitignore  ----------------------- git忽略文件
 ├── LICENSE  -------------------------- 许可
 ├── package.json  --------------------- 项目配置
