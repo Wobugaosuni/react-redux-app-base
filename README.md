@@ -17,6 +17,7 @@
 **CSS/Preprocessors**
 - Stylus
 - Postcss
+- Normalize.css
 
 **Module loader**
 - Webpack
@@ -58,7 +59,7 @@
 - 开发过程中使用的插件(-D): webpack webpack-dev-server
 
 **项目用到的插件(-D)**
-- 处理样式: style-loader css-loader postcss postcss-loader autoprefixer stylus stylus-loader
+- 处理样式: style-loader css-loader postcss postcss-loader autoprefixer stylus stylus-loader normalize.css
 - 处理图片: url-loader file-loader
 - 处理js: babel-core babel-polyfill babel-loader babel-preset-es2015 babel-preset-react babel-preset-stage-0
 - 处理eslint: eslint babel-eslint eslint-plugin-react
