@@ -115,7 +115,7 @@ github上有很多优秀的脚手架，例如：
 - [react-redux-starter-kit](https://github.com/olegakbarov/react-redux-starter-kit)
 - [react-webpack-generators](https://github.com/react-webpack-generators/generator-react-webpack)
 
-利用脚手架可以快速地搭建起项目，支持eslint语法校验、postcss自动补全等
+利用脚手架可以快速地搭建起项目，支持eslint语法校验、postcss自动补全等  <br />
 但也有一些不好的方面，例如
 - 查看package.json，包版本比较低，更新较慢，需要进行维护
 - 打包编译时，没有分离js和css代码，没有将第三方依赖单独打包，不利于系统性能的优化，包括加载速度、缓存等
@@ -136,8 +136,8 @@ postcss: [
 但在webpack 2.x，就会出现报错：
 `configuration has an unknown property 'postcss'.`
 
-解决方法：
-在根目录下新建postcss.config.js or .postcssrc.js，进行配置
+解决方法： <br />
+在根目录下新建`postcss.config.js` or `.postcssrc.js`，进行配置
 
 <br />
 
