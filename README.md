@@ -14,7 +14,7 @@
 **Javascript**
 - Language: ES6
 - Loader: Babel
-- Framework: React
+- Framework: React + Redux
 
 **CSS/Preprocessors**
 - Stylus
@@ -52,7 +52,10 @@
 ```
 .
 └── app  ------------------------------ 项目级代码，前端代码
-├── common  --------------------------- 公共库
+│   ├── reducers  --------------------- 存放数据规则(redux)
+    ├── actions  ---------------------- 存放触发的动作(redux)
+    ├── store  ------------------------ 存放store(redux)
+    ├── common  ----------------------- 公共库
     │   └── js  ----------------------- 公共js
     │   └── fonts  -------------------- 公共字体，如iconfonts
     │   └── stylus  ------------------- 公共样式
@@ -87,7 +90,7 @@
 
 ## 3. 相关插件
 **项目底层插件**
-- 项目运行时必须依赖的插件(-S): react react-dom
+- 项目运行时必须依赖的插件(-S): react react-dom redux react-redux
 - 开发过程中使用的插件(-D): webpack webpack-dev-server
 
 **项目用到的插件(-D)**
