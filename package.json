@@ -1,7 +1,7 @@
 {
-  "name": "react-project",
+  "name": "react-redux-app-cli",
   "version": "1.0.0",
-  "description": "react project",
+  "description": "A CLI for scaffolding React.js projects.",
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=dev webpack-dev-server --progress --colors",
