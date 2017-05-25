@@ -7,16 +7,38 @@ import List from '../../components/List';
 class Todo extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      todoList: []
+    };
   }
 
   render() {
     return (
-      <div>
-        <Input />
-        <List />
+      <div role="containers:Todo">
+        <h2>To Do List Demo</h2>
+        <Input onInputSubmit={this.onInputSubmit.bind(this)} />
+        <List todoList={this.state.todoList} deleteItem={this.deleteItem.bind(this)} />
       </div>
     );
+  }
+
+  onInputSubmit(inputValue) {
+    let id = this.state.todoList.length;
+
+    this.setState({
+      todoList: this.state.todoList.concat({
+        id: id,
+        value: inputValue
+      })
+    });
+  }
+
+  deleteItem(id) {
+    this.setState({
+      todoList: this.state.todoList.filter((element, index) => {
+        return id !== index;
+      })
+    });
   }
 }
 

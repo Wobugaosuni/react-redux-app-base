@@ -9,9 +9,26 @@ export default class Input extends React.Component {
 
   render() {
     return (
-      <div>
-        list
+      <div role="component:List">
+        <ul>
+          {
+            this.props.todoList.map(item => {
+              return (
+                <li
+                  key={item.id}
+                  onClick={this.onLiClick.bind(this, item.id)}
+                >
+                  { item.value }
+                </li>
+              );
+            })
+          }
+        </ul>
       </div>
     );
+  }
+
+  onLiClick(id) {
+    this.props.deleteItem(id);
   }
 }
