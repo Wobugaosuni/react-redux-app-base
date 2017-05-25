@@ -4,7 +4,9 @@
 1. 技术选型
 2. 项目目录结构
 3. 相关插件
-4. ...
+4. 与其他脚手架对比
+5. webpack 1.x VS webpack 2.x
+6. 相关文档参考
 
 <br />
 
@@ -32,11 +34,38 @@
 
 ## 2. 项目目录结构
 
+**目录结构设计原则**
+遵循组件设计的 就近原则 : 每个组件对应一个工程目录，组件所需要的各种资源(html、css、js等)在这个目录下就近维护
+
+**组件设计原则**
+使用 es6 的模块管理规范将组件进行拆分
+整体分为`智能组件`和`木偶组件`
+
+- 智能组件(页面)，存放在 ./app/containers 下。
+  职能：获取数据 + 定义好数据操作的相关函数，然后将这些数据、函数直接传递给具体实现的组件即可
+
+- 木偶组件，存放在 ./app/components 下
+  职能: 把拿到的数据展示给用户，函数操作开放给用户
+
 ```
 .
 └── app  ------------------------------ 项目级代码，前端代码
-    ├── components  ------------------- 木偶组件目录
-    ├── containers  ------------------- 智能组件目录
+├── common  --------------------------- 公共库
+    │   └── js  ----------------------- 公共js
+    │   └── fonts  -------------------- 公共字体，如iconfonts
+    │   └── stylus  ------------------- 公共样式
+    │       ├── base.styl  ------------ 基础样式
+    │       ├── iconfont.styl  -------- 引进的iconfonts样式
+    │       ├── index.styl  ----------- 样式入口文件
+    │       └── mixin.styl  ----------- 样式mixin
+    ├── components  ------------------- 木偶组件目录
+    │   ├── Input  -------------------- 单个组件
+    │   │   ├── index.js  ------------- 组件对应的js
+    │   │   └── index.styl  ----------- 组件对应的样式
+    ├── containers  ------------------- 智能组件目录(相当于页面)
+    │   └── Todo  --------------------- 单个组件
+    │       ├── index.js  ------------- 组件对应的js
+    │       └── index.styl  ----------- 组件对应的样式
     ├── index.js  --------------------- 页面入口文件
     ├── index.tmpl.html  -------------- 页面模板文件
 ├── .babelrc  ------------------------- babel编译工具的文件
@@ -92,7 +121,7 @@ github上有很多优秀的脚手架，例如：
 
 <br />
 
-## webpack 1.x VS webpack 2.x
+## 5. webpack 1.x VS webpack 2.x
 **postcss**
 在webpack 1.x，webpack.config.js是支持postcss字段的，例如：
 ```
@@ -109,7 +138,7 @@ postcss: [
 
 <br />
 
-## 相关文档参考
+## 6. 相关文档参考
 - [React Webpack小书](https://fakefish.github.io/react-webpack-cookbook/Getting-started.html)
 - [Eslint配置](http://eslint.cn/docs/user-guide/configuring)
 - [Postcss配置](https://github.com/michael-ciniawsky/postcss-load-config)
