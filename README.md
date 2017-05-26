@@ -1,16 +1,38 @@
 # react + webpack脚手架
 
 ## 目录
-1. 技术选型
-2. 项目目录结构
-3. 相关插件
-4. 与其他脚手架对比
-5. webpack 1.x VS webpack 2.x
-6. 相关文档参考
+1. 安装使用
+2. 技术选型
+3. 项目目录结构
+4. 相关插件
+5. 与其他脚手架对比
+6. webpack 1.x VS webpack 2.x
+7. 相关文档参考
 
 <br />
 
-## 1. 技术选型
+## 1. 安装使用
+**全局安装**
+`$ npm install -g react-redux-app-cli`
+
+**使用**
+```bash
+## 1
+react init
+
+## 2
+cd [projece name]
+
+## 3
+npm install
+
+## 4
+npm start
+```
+
+<br />
+
+## 2. 技术选型
 **Javascript**
 - Language: ES6
 - Loader: Babel
@@ -32,7 +54,7 @@
 
 <br />
 
-## 2. 项目目录结构
+## 3. 项目目录结构
 
 **目录结构设计原则** <br />
 遵循组件设计的 就近原则 : 每个组件对应一个工程目录，组件所需要的各种资源(html、css、js等)在这个目录下就近维护
@@ -88,7 +110,7 @@
 
 <br />
 
-## 3. 相关插件
+## 4. 相关插件
 **项目底层插件**
 - 项目运行时必须依赖的插件(-S): react react-dom redux react-redux
 - 开发过程中使用的插件(-D): webpack webpack-dev-server
@@ -113,7 +135,7 @@
 
 <br />
 
-## 4. 与其他脚手架对比
+## 5. 与其他脚手架对比
 github上有很多优秀的脚手架，例如：
 - [react-redux-starter-kit](https://github.com/olegakbarov/react-redux-starter-kit)
 - [react-webpack-generators](https://github.com/react-webpack-generators/generator-react-webpack)
@@ -127,7 +149,7 @@ github上有很多优秀的脚手架，例如：
 
 <br />
 
-## 5. webpack 1.x VS webpack 2.x
+## 6. webpack 1.x VS webpack 2.x
 **postcss**
 在webpack 1.x，webpack.config.js是支持postcss字段的，例如：
 ```
@@ -144,7 +166,7 @@ postcss: [
 
 <br />
 
-## 6. 相关文档参考
+## 7. 相关文档参考
 - [React Webpack小书](https://fakefish.github.io/react-webpack-cookbook/Getting-started.html)
 - [Eslint配置](http://eslint.cn/docs/user-guide/configuring)
 - [Postcss配置](https://github.com/michael-ciniawsky/postcss-load-config)
