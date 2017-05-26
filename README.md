@@ -12,7 +12,7 @@
 <br />
 
 ## 1. 安装使用
-**全局安装**
+**全局安装** <br />
 `$ npm install -g react-redux-app-cli`
 
 **使用**
