@@ -6,8 +6,10 @@
   "scripts": {
     "start": "NODE_ENV=dev webpack-dev-server --progress --colors",
     "build": "rm -rf ./build && NODE_ENV=production webpack --config ./webpack.production.config.js --progress --colors",
-    "rm:build": "rm -rf ./build"
+    "rm:build": "rm -rf ./build",
+    "lint": "eslint ./app"
   },
+  "pre-commit": ["lint"],
   "keywords": [
     "react",
     "webpack"
@@ -33,6 +35,7 @@
     "open-browser-webpack-plugin": "0.0.5",
     "postcss": "^6.0.1",
     "postcss-loader": "^2.0.5",
+    "pre-commit": "^1.2.2",
     "style-loader": "^0.18.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
