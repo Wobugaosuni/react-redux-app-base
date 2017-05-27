@@ -7,7 +7,8 @@
 4. 相关插件
 5. 与其他脚手架对比
 6. webpack 1.x VS webpack 2.x
-7. 相关文档参考
+7. eslint with pre-commiit
+8. 相关文档参考
 
 <br />
 
@@ -51,6 +52,7 @@ npm start
 
 **Others**
 - Eslint
+- pre-commit
 
 <br />
 
@@ -119,7 +121,7 @@ npm start
 - 处理样式: style-loader css-loader postcss postcss-loader autoprefixer stylus stylus-loader normalize.css
 - 处理图片: url-loader file-loader
 - 处理js: babel-core babel-polyfill babel-loader babel-preset-es2015 babel-preset-react babel-preset-stage-0
-- 处理eslint: eslint babel-eslint eslint-plugin-react
+- 处理eslint: eslint babel-eslint eslint-plugin-react pre-commit
 
 **Webpack配置相关插件(-D)**
 - html模板: html-webpack-plugin
@@ -166,8 +168,15 @@ postcss: [
 
 <br />
 
-## 7. 相关文档参考
+## 7. eslint with pre-commit
+团队协作中，每个人都有偏好的IDE，虽然项目里使用了eslint进行校验，但还是不能保证在Pull Request之前解决所有的校验问题。
+因此，本项目里使用node模块的`pre-commit`去解决这个问题。`pre-commit`称之为`git hooks`，就是在commit之前执行一个callback，返回成功时再执行commit。
+
+<br />
+
+## 8. 相关文档参考
 - [Webpack文档](https://webpack.js.org/)
 - [React Webpack小书](https://fakefish.github.io/react-webpack-cookbook/Getting-started.html)
 - [Eslint配置](http://eslint.cn/docs/user-guide/configuring)
 - [Postcss配置](https://github.com/michael-ciniawsky/postcss-load-config)
+- [eslint with pre-commit](http://elijahmanor.com/npm-precommit-scripts/)

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './index.styl';
 
 import Input from '../../components/Input';
