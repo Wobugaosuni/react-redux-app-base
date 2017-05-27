@@ -7,9 +7,10 @@
     "start": "NODE_ENV=dev webpack-dev-server --progress --colors",
     "build": "rm -rf ./build && NODE_ENV=production webpack --config ./webpack.production.config.js --progress --colors",
     "rm:build": "rm -rf ./build",
-    "lint": "eslint ./app"
+    "lint": "eslint ./app",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
-  "pre-commit": ["lint"],
+  // "pre-commit": ["precommit-msg", "lint"],
   "keywords": [
     "react",
     "webpack"
