@@ -167,6 +167,7 @@ postcss: [
 <br />
 
 ## 7. 相关文档参考
+- [Webpack文档](https://webpack.js.org/)
 - [React Webpack小书](https://fakefish.github.io/react-webpack-cookbook/Getting-started.html)
 - [Eslint配置](http://eslint.cn/docs/user-guide/configuring)
 - [Postcss配置](https://github.com/michael-ciniawsky/postcss-load-config)
