@@ -170,8 +170,7 @@ postcss: [
 
 ## 7. eslint with pre-commit
 团队协作中，每个人都有偏好的IDE，虽然项目里使用了eslint进行校验，但还是不能保证在Pull Request之前解决所有的校验问题。
-因此，本项目里使用node模块的`pre-commit`去解决这个问题。`pre-commit`称之为`git hooks`，就是在commit之前执行一个callback，返回成功时再执行commit。
-
+因此，本项目里使用node模块的`pre-commit`去解决这个问题。`pre-commit`属于`git hook`，将代码检查强制做到git-hook里面，即git commit之前必须要检查通过，否则无法提交。
 <br />
 
 ## 8. 相关文档参考
