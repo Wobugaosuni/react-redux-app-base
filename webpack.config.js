@@ -64,9 +64,9 @@ module.exports = {
     }),
 
     // 设置环境变量
-    // 可在业务 js 代码中使用 __Dev__ 判断是否是dev模式（dev模式下可以提示错误、测试报告等, production模式不提示）
+    // 可在业务 js 代码中使用 __DEV__ 判断是否是dev模式（dev模式下可以提示错误、测试报告等, production模式不提示）
     new webpack.DefinePlugin({
-      __Dev__: JSON.stringify(JSON.parse(process.env.NODE_ENV == 'dev') || 'false')
+      __DEV__: JSON.stringify(JSON.parse(process.env.NODE_ENV == 'dev') || 'false')
     })
   ],
 

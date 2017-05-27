@@ -4,9 +4,15 @@ import './index.styl';
 import Input from '../../components/Input';
 import List from '../../components/List';
 
+// 性能优化
+import PureReanderMixin from 'react-addons-pure-render-mixin';
+
 class Todo extends React.Component {
   constructor(props) {
     super(props);
+
+    this.shouldComponentUpdate = PureReanderMixin.shouldComponentUpdate.bind(this);
+
     this.state = {
       todoList: []
     };

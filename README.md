@@ -117,11 +117,12 @@ npm start
 - 项目运行时必须依赖的插件(-S): react react-dom redux react-redux
 - 开发过程中使用的插件(-D): webpack webpack-dev-server
 
-**项目用到的插件(-D)**
-- 处理样式: style-loader css-loader postcss postcss-loader autoprefixer stylus stylus-loader normalize.css
-- 处理图片: url-loader file-loader
-- 处理js: babel-core babel-polyfill babel-loader babel-preset-es2015 babel-preset-react babel-preset-stage-0
-- 处理eslint: eslint babel-eslint eslint-plugin-react pre-commit
+**项目用到的插件**
+- 处理样式(-D): style-loader css-loader postcss postcss-loader autoprefixer stylus stylus-loader
+- 处理样式(-S): normalize.css
+- 处理图片(-D): url-loader file-loader
+- 处理js(-D): babel-core babel-polyfill babel-loader babel-preset-es2015 babel-preset-react babel-preset-stage-0
+- 处理eslint(-D): eslint babel-eslint eslint-plugin-react pre-commit
 
 **Webpack配置相关插件(-D)**
 - html模板: html-webpack-plugin
@@ -134,6 +135,12 @@ npm start
 - 给经常使用的模块分配最小长度的id: OccurrenceOrderPlugin
 - 代码压缩: UglifyJsPlugin
 - 分模块: CommonsChunkPlugin
+
+**性能检测(-S)**
+- react-addons-perf
+
+**性能优化(-S)**
+- react-addons-pure-render-mixin
 
 <br />
 
