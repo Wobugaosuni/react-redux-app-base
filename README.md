@@ -53,6 +53,9 @@ npm start
 **Data Mock**
 - Koa
 
+**Data Manipulation**
+- Fetch
+
 **Others**
 - Eslint
 - pre-commit
@@ -83,6 +86,7 @@ npm start
     ├── actions  ---------------------- 存放触发的动作(redux)
     ├── store  ------------------------ 存放store(redux)
     ├── constants  -------------------- 存放常量(redux)
+    ├── fetch  ------------------------ ajax请求
     ├── common  ----------------------- 公共库
     │   └── js  ----------------------- 公共js
     │   └── fonts  -------------------- 公共字体，如iconfonts

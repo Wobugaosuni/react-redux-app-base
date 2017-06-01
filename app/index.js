@@ -6,6 +6,8 @@ import './common/stylus/index.styl'; // 引入公共样式
 
 import Todo from './containers/Todo';
 
+import { getData, postData } from './fetch/data';
+
 // 性能检测
 import Perf from 'react-addons-perf';
 
@@ -15,6 +17,9 @@ if (__DEV__) {
   window.Perf = Perf
 }
 
+// fetch请求
+getData();
+postData();
 
 render (
   <Todo />,
