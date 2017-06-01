@@ -1,1 +1,1 @@
-redux-store
+redux - store

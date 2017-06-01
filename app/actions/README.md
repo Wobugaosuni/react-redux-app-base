@@ -1,1 +1,1 @@
-redux-actions
+redux - actions
