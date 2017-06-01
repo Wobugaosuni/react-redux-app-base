@@ -19,7 +19,7 @@
 **使用**
 ```bash
 ## 1
-react init
+react-redux-app init
 
 ## 2
 cd [projece name]
