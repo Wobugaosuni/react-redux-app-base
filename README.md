@@ -18,16 +18,19 @@
 
 **使用**
 ```bash
-## 1
+## 1. 脚手架初始化
 react-redux-app init
 
-## 2
+## 2. 建立自己的项目
 cd [projece name]
 
-## 3
+## 3. 安装项目依赖
 npm install
 
-## 4
+## 4. 开启mock服务，使用的是3000的端口
+npm run mock
+
+## 5. 启动项目，使用的是8000的端口
 npm start
 ```
 

@@ -48,7 +48,7 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
     "url-loader": "^0.5.8",
-    "webpack": "^2.6.0",
+    "webpack": "^3.0.0",
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
