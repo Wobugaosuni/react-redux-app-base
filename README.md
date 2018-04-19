@@ -40,7 +40,7 @@ npm start
 **Javascript**
 - Language: ES6
 - Loader: Babel
-- Framework: React + Redux
+- Framework: React + Redux + React-router-dom
 
 **CSS/Preprocessors**
 - Stylus
