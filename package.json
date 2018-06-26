@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-app-cli",
+  "name": "{{projectName}}",
   "version": "2.1.0",
-  "description": "A CLI for scaffolding React.js projects.",
+  "description": "{{projectDescribe}}",
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=dev webpack-dev-server --progress --colors",
@@ -11,10 +11,6 @@
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "mock": "node --harmony ./mock/server.js"
   },
-  "pre-commit": [
-    "precommit-msg",
-    "lint"
-  ],
   "keywords": [
     "react",
     "webpack"
