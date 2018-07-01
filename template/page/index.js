@@ -7,7 +7,7 @@ import List from '../../components/List';
 // 性能优化
 import PureReanderMixin from 'react-addons-pure-render-mixin';
 
-class '{{pageName}}' extends React.Component {
+class {{pageName}} extends React.Component {
   constructor(props) {
     super(props);
 
@@ -48,4 +48,4 @@ class '{{pageName}}' extends React.Component {
   }
 }
 
-export default '{{pageName}}';
+export default {{pageName}};
