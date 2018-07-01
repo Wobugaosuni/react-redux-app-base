@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
-import Home from '../containers/home';
-import Todo from '../containers/todo';
+import Home from '../containers/Home';
+import Todo from '../containers/Todo';
 
 export default class Routes extends React.Component {
   render() {
