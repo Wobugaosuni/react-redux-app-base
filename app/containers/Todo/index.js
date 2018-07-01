@@ -1,8 +1,8 @@
 import React from 'react';
 import './index.styl';
 
-import Input from '../../components/Input';
-import List from '../../components/List';
+import Input from '../../components/input';
+import List from '../../components/list';
 
 // 性能优化
 import PureReanderMixin from 'react-addons-pure-render-mixin';
